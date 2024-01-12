@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import ThemeButton from './ThemeButton';
+import ThemedComponent from './ThemedComponent';
+import { ThemeProvider } from './ThemeContext';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <div>
+        <h1>Theme App</h1>
+        <ThemeButton />
+        <ThemedComponent />
+        <ThemedComponent />
+        <ThemedComponent />
+        <ThemedComponent />
+        <ThemedComponent />
+
+      </div>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
